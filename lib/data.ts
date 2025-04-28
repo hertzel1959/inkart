@@ -45,7 +45,7 @@ export const artworks = [
     price: "USD $199",
     available: true,
     category: "Nature",
-    image: "/arboles.png"
+    image: "/2arboles.png"
   },
   {
     id: 5,
