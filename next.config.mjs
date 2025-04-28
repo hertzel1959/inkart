@@ -1,5 +1,9 @@
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  experimental: {
+    esmExternals: false,
+  },
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -9,6 +13,5 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-}
-
+};
 export default nextConfig
