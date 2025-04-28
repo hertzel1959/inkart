@@ -4,6 +4,33 @@ import { Suspense } from "react";
 import ArtGallery from "@/components/art-gallery";
 import { Skeleton } from "@/components/ui/skeleton";
 
+export const metadata = {
+  title: "Mabel's InkArt - Gallery",
+  description: "Browse the full gallery of Mabel's handcrafted pen and ink masterpieces, celebrating nature and fantasy.",
+  openGraph: {
+    title: "Mabel's InkArt - Gallery",
+    description: "Immerse yourself in Mabel's artistic universe through her detailed ink drawings.",
+    url: "https://inkart-seven.vercel.app/gallery",
+    siteName: "Mabel's InkArt",
+    images: [
+      {
+        url: "https://inkart-seven.vercel.app/gallery-og.png",
+        width: 1200,
+        height: 630,
+        alt: "Gallery of Mabel's InkArt",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
+
+
 export default function GalleryPage() {
   return (
     <main className="min-h-screen bg-white px-4 py-12">
