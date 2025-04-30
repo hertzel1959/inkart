@@ -3,31 +3,32 @@
 import { Suspense } from "react";
 import ArtGallery from "@/components/art-gallery";
 import { Skeleton } from "@/components/ui/skeleton";
+import CategoryFilter from "@/components/category-filter";
 
-export const metadata = {
-  title: "Mabel's InkArt - Gallery",
-  description: "Browse the full gallery of Mabel's handcrafted pen and ink masterpieces, celebrating nature and fantasy.",
-  openGraph: {
-    title: "Mabel's InkArt - Gallery",
-    description: "Immerse yourself in Mabel's artistic universe through her detailed ink drawings.",
-    url: "https://inkart-seven.vercel.app/gallery",
-    siteName: "Mabel's InkArt",
-    images: [
-      {
-        url: "https://inkart-seven.vercel.app/gallery-og.png",
-        width: 1200,
-        height: 630,
-        alt: "Gallery of Mabel's InkArt",
-      },
-    ],
-    locale: "en_US",
-    type: "website",
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
+// export const metadata = {
+//   title: "Mabel's InkArt - Gallery",
+//   description: "Browse the full gallery of Mabel's handcrafted pen and ink masterpieces, celebrating nature and fantasy.",
+//   openGraph: {
+//     title: "Mabel's InkArt - Gallery",
+//     description: "Immerse yourself in Mabel's artistic universe through her detailed ink drawings.",
+//     url: "https://inkart-seven.vercel.app/gallery",
+//     siteName: "Mabel's InkArt",
+//     images: [
+//       {
+//         url: "https://inkart-seven.vercel.app/gallery-og.png",
+//         width: 1200,
+//         height: 630,
+//         alt: "Gallery of Mabel's InkArt",
+//       },
+//     ],
+//     locale: "en_US",
+//     type: "website",
+//   },
+//   robots: {
+//     index: true,
+//     follow: true,
+//   },
+// };
 
 
 
@@ -40,7 +41,7 @@ export default function GalleryPage() {
         </h1>
 
         {/* El filtro de categorías si quieres, aquí */}
-        {/* <CategoryFilter /> */}
+        <CategoryFilter />
 
         {/* Suspense obligatorio para ArtGallery */}
         <Suspense fallback={<GallerySkeleton />}>

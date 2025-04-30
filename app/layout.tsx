@@ -1,7 +1,7 @@
 import './globals.css'
 import { Cormorant_Garamond, Outfit } from "next/font/google"
 import { ThemeProvider } from '@/components/theme-provider' // ajusta la ruta si es diferente
-import type { Metadata } from 'next'
+// import type { Metadata } from 'next'
 import Header from "@/components/header";
 import Footer from "@/components/footer"; // 👈 Importa Footer
 import { Toaster } from "sonner"; // tu toaster sigue
@@ -21,10 +21,10 @@ const outfit = Outfit({
   variable: "--font-outfit",
 })
 
-export const metadata: Metadata = {
-  title: 'Mabel InkArt',
-  description: 'An artistic space showcasing detailed ink illustrations by Mabel.',
-}
+// export const metadata: Metadata = {
+//   title: 'Mabel InkArt',
+//   description: 'An artistic space showcasing detailed ink illustrations by Mabel.',
+// }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (

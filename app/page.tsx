@@ -5,35 +5,6 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Head from "next/head";
 
-export const metadata = {
-  title: "Mabel's InkArt - Home",
-  description: "Explore unique pen and ink artworks by Mabel, blending nature, fantasy, and imagination in every stroke.",
-  openGraph: {
-    title: "Mabel's InkArt - Home",
-    description: "Discover a world of creativity through Mabel's intricate pen and ink artworks.",
-    url: "https://inkart-seven.vercel.app/",
-    siteName: "Mabel's InkArt",
-    images: [
-      {
-        url: "https://inkart-seven.vercel.app/home-og.png", // (opcional: si quieres una imagen de portada para Home)
-        width: 1200,
-        height: 630,
-        alt: "Mabel's InkArt Home",
-      },
-    ],
-    locale: "en_US",
-    type: "website",
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
-
-
-
-
-
 export default function LandingPage() {
   return (
     <>
