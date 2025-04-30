@@ -111,7 +111,9 @@ export default function ArtworkCard({ artwork, onSelect }: ArtworkCardProps) {
     duration: 0.5,
     delay: 0.2,
   }}
-  onClick={handleAddToWishlist}
+  onSelect={handleAddToWishlist}
+//  onClick={handleAddToWishlist}
+
 >
   <Heart size={18} />
 </motion.button>

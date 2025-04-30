@@ -31,7 +31,16 @@ import CategoryFilter from "@/components/category-filter";
 
 
 
-export default function GalleryPage() {
+export default async function GalleryPage({
+  searchParams,
+}: {
+  searchParams: { category?: string };
+}) {
+  // <-- Aquí lees directamente la query
+  const params = await searchParams;
+  const activeCategory = params.category ?? "All";
+
+
   return (
     <main className="min-h-screen bg-white px-4 py-12">
       <div className="container mx-auto">
@@ -40,11 +49,11 @@ export default function GalleryPage() {
         </h1>
 
         {/* El filtro de categorías si quieres, aquí */}
-        <CategoryFilter />
+        <CategoryFilter selected={activeCategory} />
 
         {/* Suspense obligatorio para ArtGallery */}
         <Suspense fallback={<GallerySkeleton />}>
-          <ArtGallery />
+        <ArtGallery category={activeCategory} />
         </Suspense>
       </div>
     </main>

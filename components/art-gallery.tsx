@@ -1,61 +1,61 @@
-"use client"
+// src/components/art-gallery.tsx
+"use client";
 
-import { useState, useEffect } from "react"
-import { useSearchParams } from "next/navigation"
-import { motion, AnimatePresence } from "framer-motion"
-import { artworks } from "@/lib/data"
-import ArtworkCard from "@/components/artwork-card"
-import ArtworkModal from "@/components/artwork-modal"
+import { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import ArtworkCard from "./artwork-card";
+import ArtworkModal from "./artwork-modal";
+import { artworks } from "@/lib/data";
+import type { Artwork } from "@/lib/types";
 
-export default function ArtGallery() {
-  const searchParams = useSearchParams()
-  const categoryParam = searchParams.get("category")
-
-  const [filteredArtworks, setFilteredArtworks] = useState(artworks)
-  const [selectedArtwork, setSelectedArtwork] = useState(null)
+export default function ArtGallery({
+  category,
+}: {
+  category: string;
+}) {
+  const [filtered, setFiltered] = useState<Artwork[]>([]);
 
   useEffect(() => {
-    if (!categoryParam || categoryParam === "all") {
-      setFilteredArtworks(artworks)
+    if (category === "All") {
+      setFiltered(artworks);
     } else {
-      setFilteredArtworks(
-        artworks.filter((artwork) => artwork.category.toLowerCase() === categoryParam.toLowerCase())
-      )
+      setFiltered(
+        artworks.filter((a) => a.category.toLowerCase() === category.toLowerCase())
+      );
     }
-  }, [categoryParam])
+  }, [category]);
+
+  const [selected, setSelected] = useState<Artwork | null>(null);
 
   return (
     <>
       <motion.div
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
       >
         <AnimatePresence mode="popLayout">
-          {filteredArtworks.map((artwork, index) => (
+          {filtered.map((art, i) => (
             <motion.div
-              key={artwork.id}
+              key={art.id}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.4, delay: index * 0.1 }}
+              transition={{ duration: 0.4, delay: i * 0.05 }}
               layout
             >
-             <ArtworkCard artwork={artwork} />
+
+              <ArtworkCard artwork={art} onSelect={() => setSelected(art)} />
 
             </motion.div>
           ))}
         </AnimatePresence>
       </motion.div>
 
-      {/* Modal centralizado */}
-      {selectedArtwork && (
-        <ArtworkModal
-          artwork={selectedArtwork}
-          onClose={() => setSelectedArtwork(null)}
-        />
+      {selected && (
+        <ArtworkModal artwork={selected} onClose={() => setSelected(null)} />
       )}
     </>
-  )
+  );
 }
