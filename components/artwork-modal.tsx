@@ -57,7 +57,7 @@ export default function ArtworkModal({ artwork, onClose }: Props) {
           </button>
 
           {/* Wishlist botón */}
-         {/* <button
+         <button
             onClick={toggleWishlist}
             className={`absolute top-4 left-4 p-2 rounded-full z-10 transition-colors ${
               isWishlisted ? "bg-red-500 text-white" : "bg-white text-gray-800 hover:bg-gray-100"
@@ -66,7 +66,7 @@ export default function ArtworkModal({ artwork, onClose }: Props) {
           >
             <Heart fill={isWishlisted ? "currentColor" : "none"} size={20} />
           </button>
-*/}
+
 
           {/* Imagen + Texto */}
           <div className="flex flex-col items-center gap-6">
