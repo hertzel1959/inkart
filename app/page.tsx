@@ -16,7 +16,7 @@ export default function LandingPage() {
         <meta property="og:description" content="Explore the magic of handmade art and creativity." />
         <meta property="og:image" content="/og-image.png" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.tudominio.com/" />
+        <meta property="og:url" content="https://www.icresil.com/" />
       </Head>
 
       <main className="relative h-screen flex items-center justify-center overflow-hidden">

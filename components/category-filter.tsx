@@ -46,7 +46,7 @@ export default function CategoryFilter() {
   }
 
   return (
-    <div className="flex justify-center mb-12 overflow-x-auto py-2 no-scrollbar">
+    <div className="flex justify-start mb-12 overflow-x-auto py-2 no-scrollbar">
       <div className="flex gap-2 px-2">
         {categories.map((category, index) => (
           <motion.button
