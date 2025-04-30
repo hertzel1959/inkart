@@ -21,7 +21,7 @@ export default function LandingPage() {
 
       <main className="relative h-screen flex items-center justify-center overflow-hidden">
         <Image
-          src="/baby drags.png"
+          src="/baby_drags.png"
           alt="Artistic Vision"
           fill
           className="object-cover brightness-75"
