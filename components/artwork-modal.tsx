@@ -1,10 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import { X, Heart } from "lucide-react";
+import { X, Heart, ShoppingCart } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Artwork } from "@/lib/types";
 import { useEffect, useState } from "react";
+import { toast } from "sonner";
+import { useCart } from "@/context/CartContext";
 
 interface Props {
   artwork: Artwork;
@@ -12,6 +14,8 @@ interface Props {
 }
 
 export default function ArtworkModal({ artwork, onClose }: Props) {
+  const { addItem } = useCart();
+
   const [isWishlisted, setIsWishlisted] = useState(false);
 
   useEffect(() => {
@@ -30,7 +34,17 @@ export default function ArtworkModal({ artwork, onClose }: Props) {
   const toggleWishlist = () => {
     setIsWishlisted(!isWishlisted);
   };
-
+const handleAddToCart = () => {
+    addItem({
+      id: artwork.id,
+      title: artwork.title,
+      // convierte el precio a número si lo guardas como string
+      price: parseFloat(artwork.price.replace(/[^0-9.]/g, "")),
+      image: artwork.image,
+    });
+    toast.success("Added to cart 🛒");
+    onClose();          // cierra el modal después de añadir
+  };
   return (
     <AnimatePresence>
       <motion.div
@@ -101,6 +115,14 @@ export default function ArtworkModal({ artwork, onClose }: Props) {
               </p>
             </div>
           </div>
+           {/* Botón agregar al carrito */}
+           <button
+            onClick={handleAddToCart}
+            className="mt-6 flex items-center gap-2 bg-zinc-800 text-white px-4 py-2 rounded-md mx-auto"
+          >
+            <ShoppingCart size={18} />
+            Add to cart
+          </button>
         </motion.div>
       </motion.div>
     </AnimatePresence>

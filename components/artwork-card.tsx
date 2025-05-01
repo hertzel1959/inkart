@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation"; // ✅ IMPORTAR el router
 import Image from "next/image";
-
 import { Badge } from "@/components/ui/badge";
 import { ShoppingCart, Heart, ZoomIn } from "lucide-react";
 import ArtworkModal from "./artwork-modal";
@@ -11,7 +10,7 @@ import { Button } from "@/components/ui/button";
 import { addToWishlist, removeFromWishlist, getWishlist } from "@/lib/wishlist";
 import { toast } from "sonner"; // O react-hot-toast
 import { motion, AnimatePresence } from "framer-motion";
-
+import { useCart } from "@/context/CartContext";
 
 
 interface Artwork {
@@ -36,7 +35,7 @@ export default function ArtworkCard({ artwork, onSelect }: ArtworkCardProps) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isWishlisted, setIsWishlisted] = useState(false);
   const router = useRouter(); // ✅ AQUÍ, solo una vez
-
+  const { addItem } = useCart();
   const handleAddToWishlist = () => {
     addToWishlist({
       id: artwork.id,
@@ -120,13 +119,21 @@ export default function ArtworkCard({ artwork, onSelect }: ArtworkCardProps) {
       {/* Botón carrito */}
       {artwork.available && (
         <motion.button
-          className="bg-black text-white p-3 rounded-full shadow-md"
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ delay: 0.3 }}
-        >
-          <ShoppingCart size={18} />
+        onClick={() =>
+          addItem({
+            id: artwork.id,
+            title: artwork.title,
+            price: parseFloat(artwork.price.replace(/[^0-9.]/g, "")),
+            image: artwork.image,
+          })
+        }
+        
+        className="bg-black text-white p-3 rounded-full shadow-md"
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ delay: 0.3 }}        >
+        <ShoppingCart size={18} />
         </motion.button>
       )}
     </motion.div>
