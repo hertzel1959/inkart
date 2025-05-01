@@ -1,160 +1,154 @@
+// src/components/ArtworkCard.tsx
 "use client";
 
 import { useState, useEffect } from "react";
-import { useRouter } from "next/navigation"; // ✅ IMPORTAR el router
-import Image from "next/image";
-import { Badge } from "@/components/ui/badge";
-import { ShoppingCart, Heart, ZoomIn } from "lucide-react";
-import ArtworkModal from "./artwork-modal";
-import { Button } from "@/components/ui/button";
-import { addToWishlist, removeFromWishlist, getWishlist } from "@/lib/wishlist";
-import { toast } from "sonner"; // O react-hot-toast
+import { Heart, ShoppingCart, ZoomIn } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { toast } from "sonner";
+
+import ArtworkModal from "./artwork-modal";
 import { useCart } from "@/context/CartContext";
+import {
+  addToWishlist,
+  removeFromWishlist,
+  getWishlist,
+  WishlistItem,
+} from "@/lib/wishlist";
+import type { Artwork } from "@/lib/types";
 
-
-interface Artwork {
-  id: number;
-  title: string;
-  description: string;
-  medium: string;
-  size: string;
-  price: string;
-  available: boolean;
-  category: string;
-  image: string;
-}
-interface ArtworkCardProps {
+interface Props {
   artwork: Artwork;
-  onSelect?: () => void;
 }
 
-export default function ArtworkCard({ artwork, onSelect }: ArtworkCardProps) {
+export default function ArtworkCard({ artwork }: Props) {
+  const [hover, setHover] = useState(false);
+  const [modal, setModal] = useState(false);
 
-  const [isHovered, setIsHovered] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  /* ---------- wishlist ---------- */
   const [isWishlisted, setIsWishlisted] = useState(false);
-  const router = useRouter(); // ✅ AQUÍ, solo una vez
-  const { addItem } = useCart();
-  const handleAddToWishlist = () => {
-    addToWishlist({
-      id: artwork.id,
-      title: artwork.title,
-      image: artwork.image,
-    });
-    setIsWishlisted(true);
-    toast.success("Added to Wishlist! ❤️");
-  };
+
+  // sincroniza estado local con localStorage
   useEffect(() => {
-    const wishlist = getWishlist();
-    setIsWishlisted(wishlist.some(item => item.id === artwork.id));
+    const sync = () =>
+      setIsWishlisted(getWishlist().some((w) => w.id === artwork.id));
+    sync();
+    window.addEventListener("wishlist-updated", sync);
+    return () => window.removeEventListener("wishlist-updated", sync);
   }, [artwork.id]);
 
+  const toggleWishlist = () => {
+    if (isWishlisted) {
+      removeFromWishlist(artwork.id);
+      toast.info("Removed from wishlist 💔");
+    } else {
+      const item: WishlistItem = {
+        id: artwork.id,
+        title: artwork.title,
+        image: artwork.image,
+      };
+      addToWishlist(item);
+      toast.success("Added to wishlist ❤️");
+    }
+  };
+
+  /* ---------- cart ---------- */
+  const { cart, addItem: addCart, removeItem: removeCart } = useCart();
+  const isInCart = cart.some((c) => c.id === artwork.id);
+
+  const toggleCart = () => {
+    if (isInCart) {
+      //removeCart(artwork.id);
+      toast.info("This Artwork is alredy in your cart cart 🛒");
+    } else {
+      addCart({
+        id: artwork.id,
+        title: artwork.title,
+        price: parseFloat(artwork.price.replace(/[^\d.]/g, "")),
+        image: artwork.image,
+      });
+      toast.success("Added to cart 🛒");
+    }
+  };
+
+  /* ---------- UI ---------- */
   return (
     <>
       <motion.div
-        className="group relative bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300"
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-        whileHover={{ y: -5 }}
+        onMouseEnter={() => setHover(true)}
+        onMouseLeave={() => setHover(false)}
+        whileHover={{ y: -4 }}
+        className="relative rounded-lg overflow-hidden shadow"
       >
-        <div className="relative aspect-square overflow-hidden bg-white p-4">
-          <motion.div
-            className="relative w-full h-full"
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.5, ease: "easeOut" }}
-          >
-            <Image
-              src={artwork.image || "/placeholder.svg"}
-              alt={artwork.title}
-              fill
-              priority
-              className="object-contain transition-transform duration-700 ease-out"
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            />
-          </motion.div>
+        {/* imagen */}
+        <div className="relative w-full h-96">
+          <img
+            src={artwork.image}
+            alt={artwork.title}
+            className="object-contain w-full h-full"
+          />
+
+          {/* overlay: zoom / wishlist / cart */}
           <AnimatePresence>
-  {isHovered && (
-    <motion.div
-      className="absolute inset-0 bg-black/30 backdrop-blur-sm flex items-center justify-center gap-3"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.3 }}
-    >
-      {/* Botón abrir modal */}
-      <motion.button
-        className="bg-white text-black p-3 rounded-full shadow-md"
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ delay: 0.1 }}
-        onClick={() => setIsModalOpen(true)}
-      >
-        <ZoomIn size={18} />
-      </motion.button>
+            {hover && (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                className="absolute inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center gap-4"
+              >
+                {/* Zoom */}
+                <button
+                  onClick={() => setModal(true)}
+                  className="bg-white p-2 rounded-full shadow"
+                  title="View"
+                >
+                  <ZoomIn size={18} />
+                </button>
 
-      {/* Botón wishlist */}
-      <motion.button
-  className={`p-3 rounded-full ${isWishlisted ? "bg-red-500 text-white" : "bg-white text-black"} shadow-md`}
-  initial={{ opacity: 0, scale: 0.8 }}
-  animate={{
-    opacity: 1,
-    scale: isWishlisted ? [1, 1.3, 1] : 1, // 🔥 Latido: agranda y vuelve
-    rotate: isWishlisted ? [0, -10, 10, -5, 5, 0] : 0, // 🔥 Mini temblor de emoción
-  }}
-  exit={{ opacity: 0, scale: 0.8 }}
-  transition={{
-    type: "tween",
-    ease: "easeInOut",
-    duration: 0.5,
-    delay: 0.2,
-  }}
-  onClick={handleAddToWishlist}
+                {/* Wishlist */}
+                <button
+                  onClick={toggleWishlist}
+                  className={`p-2 rounded-full shadow ${
+                    isWishlisted
+                      ? "bg-red-600 text-white hover:bg-red-700"
+                      : "bg-white text-black"
+                  }`}
+                  title={isWishlisted ? "Remove from wishlist" : "Add to wishlist"}
+                >
+                  <Heart size={18} />
+                </button>
 
->
-  <Heart size={18} />
-</motion.button>
-
-      {/* Botón carrito */}
-      {artwork.available && (
-        <motion.button
-        onClick={() =>
-          addItem({
-            id: artwork.id,
-            title: artwork.title,
-            price: parseFloat(artwork.price.replace(/[^0-9.]/g, "")),
-            image: artwork.image,
-          })
-        }
-        
-        className="bg-black text-white p-3 rounded-full shadow-md"
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ delay: 0.3 }}        >
-        <ShoppingCart size={18} />
-        </motion.button>
-      )}
-    </motion.div>
-  )}
-</AnimatePresence>
-
+                {/* Cart */}
+                <button
+                  onClick={toggleCart}
+                  disabled={isInCart}                            // 👈 ← evita clics extra
+                  className={`p-2 rounded-full shadow ${
+                    isInCart
+                      ? "bg-green-600 text-white hover:bg-green-700"
+                      : "bg-black text-white hover:bg-zinc-900"
+                  }`}
+                  title={isInCart ? "Remove from cart" : "Add to cart"}
+                >
+                  <ShoppingCart size={18} />
+                </button>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
 
-        <div className="p-4">
+        {/* pie de tarjeta */}
+        <div className="p-4 text-center">
           <h3 className="font-serif text-lg">{artwork.title}</h3>
-          <div className="flex justify-between items-center mt-2">
-            <p className="font-medium">{artwork.price}</p>
-            <Badge variant={artwork.available ? "outline" : "secondary"} className="text-xs">
-              {artwork.available ? "Available" : "Sold"}
-            </Badge>
-          </div>
+          <p className="text-sm mt-1">{artwork.price}</p>
+          <span className="text-xs text-gray-600">
+            {artwork.available ? "Available" : "Sold"}
+          </span>
         </div>
       </motion.div>
 
-      {isModalOpen && (
-        <ArtworkModal artwork={artwork} onClose={() => setIsModalOpen(false)} />
+      {/* modal */}
+      {modal && (
+        <ArtworkModal artwork={artwork} onClose={() => setModal(false)} />
       )}
     </>
   );

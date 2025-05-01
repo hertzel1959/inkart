@@ -42,14 +42,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </CartProvider>
         </ThemeProvider>
 
-        {/* Toaster global */}
-        <Toaster
-          theme="system"
-          position="top-right"
-          richColors
-          closeButton
-          duration={3000}
-        />
+       {/*  ⬇️  Aquí dejas el Toaster minimal   */}
+      <Toaster
+        position="bottom-center"
+        theme="light"      // o "system"
+        visibleToasts={2}  // máximo simultáneo
+
+      />
       </body>
     </html>
   );

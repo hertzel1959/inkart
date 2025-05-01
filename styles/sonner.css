@@ -1,0 +1,21 @@
+/* Sonner custom look */
+[data-sonner-toast] {
+    @apply rounded-xl border border-zinc-200 bg-white shadow-lg
+           text-slate-900 font-outfit text-sm;
+  }
+  
+  /* Icon wrapper */
+  [data-sonner-toast] > div:first-child {
+    @apply flex h-9 w-9 items-center justify-center shrink-0 rounded-full
+           bg-emerald-100 text-emerald-600;           /* verde suave */
+  }
+  
+  /* Title & description */
+  [data-sonner-title]   { @apply font-semibold; }
+  [data-sonner-description] { @apply text-xs opacity-90; }
+  
+  /* Buttons (e.g., close) */
+  [data-sonner-close-button] {
+    @apply hover:bg-zinc-100 rounded-md p-1 transition-colors;
+  }
+  

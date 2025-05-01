@@ -19,7 +19,7 @@ export default function CartPage() {
 
   return (
     <section className="container mx-auto max-w-3xl py-16 space-y-8">
-      <h1 className="text-3xl font-semibold">Your cart</h1>
+      <h1 className="text-3xl font-semibold">Your Shopping cart 🛒</h1>
 
       {/* Lista de ítems */}
       <ul className="space-y-8">
