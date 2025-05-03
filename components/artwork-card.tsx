@@ -53,12 +53,19 @@ export default function ArtworkCard({ artwork }: Props) {
 
   /* ---------- cart ---------- */
   const { cart, addItem: addCart, removeItem: removeCart } = useCart();
+
   const isInCart = cart.some((c) => c.id === artwork.id);
 
-  const toggleCart = () => {
+  const toggleCart = async () => {
+  
+    if (!artwork.available) {
+      toast.error("This artwork has already been sold");
+      return;
+    }
+  
     if (isInCart) {
-      //removeCart(artwork.id);
-      toast.info("This Artwork is alredy in your cart cart 🛒");
+      removeCart(artwork.id);
+      toast.info("This Artwork was alredy in your cart cart 🛒");
     } else {
       addCart({
         id: artwork.id,

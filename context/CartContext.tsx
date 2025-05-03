@@ -23,6 +23,10 @@ export interface CartContextType {
 /* ----- Contexto ----- */
 const CartContext = createContext<CartContextType | undefined>(undefined)
 
+
+
+
+
 /* ----- Provider ----- */
 export function CartProvider({ children }: { children: React.ReactNode }) {
   const [cart, setCart] = useState<CartItem[]>([])
@@ -39,13 +43,25 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   }, [cart])
 
   /* ---------- Acciones ---------- */
+
+
+  
   const addItem = (item: Omit<CartItem, "quantity">) => {
+
+// CartContext.tsx
+const clean = Number(String(item.price).replace(/[^\d.-]/g, ""));
+if (isNaN(clean)) {
+  toast.error("Price not valid");
+  return;
+}
+
+
     setCart(prev => {
       if (prev.some(i => i.id === item.id)) {
         toast.info("This artwork is already in your cart")
         return prev
       }
-      toast.success("Added to cart 🛒")
+      //toast.success("Added to cart 🛒")
       return [...prev, { ...item, quantity: 1 }]
     })
   }
