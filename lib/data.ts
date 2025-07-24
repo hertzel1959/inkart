@@ -87,7 +87,7 @@ export const artworks = [
       size: "35 x 28 cm.",
       price: "USD $140",
       available: true,
-      category: "Geometry",
+      category: "geometric",
       image: "/geo.jpg",
       alt: "Intricate ink drawing combining geometric and organic patterns."
     },
@@ -112,7 +112,7 @@ export const artworks = [
       size: "28 x 28 cm.",
       price: "USD $160",
       available: true,
-      category: "Geometry",
+      category: "geometric",
       image: "/mandala1.jpg",
       alt: "Black ink mandala artwork with intricate details."
     },
@@ -184,7 +184,7 @@ export const artworks = [
       size: "28 x 28 cm.",
       price: "USD $160",
       available: true,
-      category: "Geometry",
+      category: "geometric",
       image: "/mandala1.jpg",
       alt: "Detailed black ink mandala with spirals and symmetry."
     },
@@ -392,7 +392,7 @@ export const artworks = [
     size: "42 x 29.5 cm",
     price: "USD $220",
     available: true,
-    category: "Geometry", // cambia Abstract por Sacred Geometry si prefieres
+    category: "geometric", // cambia Abstract por Sacred Geometry si prefieres
     image: "/hole.jpg",
     alt:" Portal to the Inner Light - A sacred spiral opens a path inward, inviting the soul to journey through layers of wisdom, transformation, and rebirth.",
     },
@@ -474,7 +474,7 @@ export const artworks = [
       id: 38,
       title: "Mr. Sun",
       image: "/sol.jpg",
-      category: "Geometry",
+      category: "geometric",
       medium: "Ink, marker, pen and coloring pencils",
       size: "29.7 × 42 cm (A3 vertical)",
       description: "Mr. Sun is a vibrant mandala that radiates warmth and intricate energy. Dominated by golden yellows, sunburst oranges, and earthy reds, the piece evokes the essence of sunlight and vitality. Its symmetrical design combines floral and tribal elements, forming a central bloom surrounded by complex patterns that resemble sunrays and organic shields. Accents of green and heart shapes bring balance and harmony, while the artist’s signature, 'Mabel', grounds the composition with a personal touch. This hand-drawn mandala celebrates the life-giving force of the sun with color, symmetry, and soul.",
