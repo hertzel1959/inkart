@@ -392,7 +392,7 @@ export const artworks = [
     size: "42 x 29.5 cm",
     price: "USD $220",
     available: true,
-    category: "Sacred Geometry", // cambia Abstract por Sacred Geometry si prefieres
+    category: "Geometry", // cambia Abstract por Sacred Geometry si prefieres
     image: "/hole.jpg",
     alt:" Portal to the Inner Light - A sacred spiral opens a path inward, inviting the soul to journey through layers of wisdom, transformation, and rebirth.",
     },
@@ -400,7 +400,7 @@ export const artworks = [
     {
       id: 32,
       title: "Warden Spirits ",
-      image: "/clever.jpg",
+      image: "/clever1.jpg",
       category: "Animals",
       medium: "Pen and Ink on paper",
       size: "21 x 29.7 cm",
@@ -457,6 +457,30 @@ export const artworks = [
       price: "USD $150",
       available: false,
       alt: "Dragón Love - Two aquatic dragons entwine in an elegant dance of symmetry and affection, sharing a single breath.",
+    },
+    {
+      id: 37,
+      title: "Wolf",
+      image: "/foxy.jpg",
+      category: "Animals",
+      medium: "Ink on paper",
+      size: "29.7 × 42 cm (A3 vertical)",
+      description: "Two aquatic dragons entwine in an elegant dance of symmetry and affection, sharing a single breath. Intricate textures and flowing lines evoke both movement and harmony, portraying a mystical underwater courtship with powerful emotion and silent intimacy.",
+      price: "USD $250",
+      available: false,
+      alt: "Dragón Love - Two aquatic dragons entwine in an elegant dance of symmetry and affection, sharing a single breath.",
+    },
+    {
+      id: 38,
+      title: "Mr. Sun",
+      image: "/sol.jpg",
+      category: "Geometry",
+      medium: "Ink, marker, pen and coloring pencils",
+      size: "29.7 × 42 cm (A3 vertical)",
+      description: "Mr. Sun is a vibrant mandala that radiates warmth and intricate energy. Dominated by golden yellows, sunburst oranges, and earthy reds, the piece evokes the essence of sunlight and vitality. Its symmetrical design combines floral and tribal elements, forming a central bloom surrounded by complex patterns that resemble sunrays and organic shields. Accents of green and heart shapes bring balance and harmony, while the artist’s signature, 'Mabel', grounds the composition with a personal touch. This hand-drawn mandala celebrates the life-giving force of the sun with color, symmetry, and soul.",
+      price: "USD $",
+      available: false,
+      alt: "",
     },
   ]
   
