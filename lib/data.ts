@@ -437,7 +437,7 @@ export const artworks = [
     {
       id: 35,
       title: "Inkwoven Dreams",
-      image: "/ink01.png",
+      image: "/ink001.png",
       category: "Fantasy",
       medium: "Ink on paper",
       size: "21 x 29.7 cm",
