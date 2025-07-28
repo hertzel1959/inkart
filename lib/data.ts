@@ -482,5 +482,17 @@ export const artworks = [
       available: false,
       alt: "",
     },
+    {
+      id: 39,
+      title: "Mrs. Moon",
+      image: "/luna.jpg",
+      category: "geometric",
+      medium: "Ink, marker, pen and coloring pencils",
+      size: "29.7 × 42 cm (A3 vertical)",
+      description: "Mr. Sun is a vibrant mandala that radiates warmth and intricate energy. Dominated by golden yellows, sunburst oranges, and earthy reds, the piece evokes the essence of sunlight and vitality. Its symmetrical design combines floral and tribal elements, forming a central bloom surrounded by complex patterns that resemble sunrays and organic shields. Accents of green and heart shapes bring balance and harmony, while the artist’s signature, 'Mabel', grounds the composition with a personal touch. This hand-drawn mandala celebrates the life-giving force of the sun with color, symmetry, and soul.",
+      price: "USD $",
+      available: false,
+      alt: "",
+    },
   ]
   
