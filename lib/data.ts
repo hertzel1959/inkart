@@ -176,22 +176,9 @@ export const artworks = [
       available: true,
       alt: "Ink drawing of a galloping majestic horse."
     },
+     
     {
       id: 15,
-      title: "Mandala Harmony",
-      description: "Complex mandala with interconnected spirals symbolizing harmony.",
-      medium: "Pen and Ink",
-      size: "28 x 28 cm.",
-      price: "USD $160",
-      available: true,
-      category: "geometric",
-      image: "/mandala1.jpg",
-      alt: "Detailed black ink mandala with spirals and symmetry."
-    },
-  
-  
-    {
-      id: 16,
       title: "Sacred Orbit  ",
       image: "/mandala2.jpg",
       category: "Geometric",
@@ -203,7 +190,7 @@ export const artworks = [
       alt: "Black ink mandala artwork with intricate details.",
     },
     {
-      id: 17,
+      id: 16,
       title: "Moonlace",
       image: "/mandala3.jpg",
       category: "Geometric",
@@ -215,7 +202,7 @@ export const artworks = [
       alt: "Moonlace - Detailed black ink mandala with spirals and symmetry.",
     },
     {
-      id: 18,
+      id: 17,
       title: "Silent Radiance ",
       image: "/mandala4.jpg",
       category: "Geometric",
@@ -227,7 +214,7 @@ export const artworks = [
       alt: "Silent Radiance - Detailed black ink mandala with spirals and symmetry.",
     },
     {
-      id: 19,
+      id: 18,
       title: "The Watchcircle   ",
       image: "/mandala5.jpg",
       category: "Geometric",
@@ -239,7 +226,7 @@ export const artworks = [
       alt : "The Watchcircle - Detailed black ink mandala with spirals, rhythm  and symmetry.",
     },
     {
-      id: 20,
+      id: 19,
       title: "Crowned Fury ",
       image: "/leon.jpg",
       category: "Animals",
@@ -253,7 +240,7 @@ export const artworks = [
     },
     
     {
-      id: 21,
+      id: 20,
       title: "Medusa Bloom ",
       image: "/medusa.jpg",
       category: "Fantasy",
@@ -267,7 +254,7 @@ export const artworks = [
     },
     
     {
-      id: 22,
+      id: 21,
       title: "Cathedral of Eyes ",
       image: "/ojos.jpg",
       category: "Fantasy",
@@ -282,7 +269,7 @@ export const artworks = [
     
     
     {
-      id: 23,
+      id: 22,
       title: " Cellular Echoes",
       image: "/circles.jpg",
       category: "Geometric",
@@ -294,7 +281,7 @@ export const artworks = [
       alt: "Cellular Echoes - Detailed black ink mandala with spirals and symmetry.",
     },
       {
-      id: 24,
+      id: 23,
       title: "Whispering Muse ",
       image: "/girl1.jpg",
       category: "Humans",
@@ -307,7 +294,7 @@ export const artworks = [
     },
     
     {
-      id: 25,
+      id: 24,
       title: "Zenspired ",
       image: "/girl2.jpg",
       category: "Humans",
@@ -320,7 +307,7 @@ export const artworks = [
     },
     
     {
-      id: 26,
+      id: 25,
       title: "Braided Spirit ",
       image: "/girl3.jpg",
       category: "Humans",
@@ -333,7 +320,7 @@ export const artworks = [
     },
     
     {
-      id: 27,
+      id: 26,
       title: "Textures of Time",
       image: "/geo.jpg",
       category: "Geometric",
@@ -346,7 +333,7 @@ export const artworks = [
     },
     
     {
-      id: 28,
+      id: 27,
       title: "Blizzard Buddy ",
       image: "/drag1.jpg",
       category: "Animals",
@@ -359,7 +346,7 @@ export const artworks = [
     },
     
     {
-      id: 29,
+      id: 28,
       title: " Tiny Wyrm",
       image: "/drag2.jpg",
       category: "Animals",
@@ -372,7 +359,7 @@ export const artworks = [
     },
     
     {
-      id: 30,
+      id: 29,
       title: "Drake O’Gold ",
       image: "/drag3.jpg",
       category: "Animals",
@@ -385,7 +372,7 @@ export const artworks = [
     },
     
     {
-      id: 31,
+      id: 30,
       title: "Portal to the Inner Light",
     description: "A sacred spiral opens a path inward, inviting the soul to journey through layers of wisdom, transformation, and rebirth. A meditation on the infinite light that dwells within all beings.",
     medium: "Pen and Ink on paper",
@@ -398,7 +385,7 @@ export const artworks = [
     },
   
     {
-      id: 32,
+      id: 31,
       title: "Warden Spirits ",
       image: "/clever1.jpg",
       category: "Animals",
@@ -410,7 +397,7 @@ export const artworks = [
       alt: "Warden Spirits - A fox and an owl, fused in intricate geometry, represent instinct and wisdom united.",
     },
     {
-      id: 33,
+      id: 32,
       title: "Train to Hell",
       description:
         "A lone steam train emerges from a stone tunnel only to find its tracks vanishing into a cascading abyss of waterfalls and stacked boulders. A surreal vision of doom and descent, this piece captures the unsettling tension between progress and collapse — a journey with no return.",
@@ -423,7 +410,7 @@ export const artworks = [
       category: "Fantasy",
     },
     {
-      id: 34,
+      id: 33,
       title: "Summer Garden ",
       image: "/garden.jpg",
       category: "Nature",
@@ -435,7 +422,7 @@ export const artworks = [
       alt: "Summer Garden - A lush tangle of stylized blooms and abstract flora springs to life.",
     },
     {
-      id: 35,
+      id: 34,
       title: "Inkwoven Dreams",
       image: "/ink001.png",
       category: "Fantasy",
@@ -447,7 +434,7 @@ export const artworks = [
       alt: "Inkwoven Dreams - A mesmerizing tapestry of interwoven patterns and surreal forms.",
     },
     {
-      id: 36,
+      id: 35,
       title: "Dragon Love",
       image: "/draglove.jpg",
       category: "Animals",
@@ -459,7 +446,7 @@ export const artworks = [
       alt: "Dragón Love - Two aquatic dragons entwine in an elegant dance of symmetry and affection, sharing a single breath.",
     },
     {
-      id: 37,
+      id: 36,
       title: "Wolf",
       image: "/foxy.jpg",
       category: "Animals",
@@ -471,7 +458,7 @@ export const artworks = [
       alt: "Dragón Love - Two aquatic dragons entwine in an elegant dance of symmetry and affection, sharing a single breath.",
     },
     {
-      id: 38,
+      id: 37,
       title: "Mr. Sun",
       image: "/sol.jpg",
       category: "geometric",
@@ -483,7 +470,7 @@ export const artworks = [
       alt: "",
     },
     {
-      id: 39,
+      id: 38,
       title: "Mrs. Moon",
       image: "/luna.jpg",
       category: "geometric",
@@ -495,7 +482,7 @@ export const artworks = [
       alt: "",
     },
     {
-      id: 40,
+      id: 39,
       title: "Tiny Talon, Big Dreams",
       image: "/drag4.jpg",
       category: "Animals",
@@ -507,7 +494,7 @@ export const artworks = [
       alt: "",
     },
      {
-      id: 41,
+      id: 40,
       title: "Baloon Fishy",
       image: "/globo.jpg",
       category: "geometric",
