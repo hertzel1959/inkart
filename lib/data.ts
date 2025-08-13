@@ -459,6 +459,18 @@ export const artworks = [
     },
     {
       id: 37,
+      title: "Tiny Talon, Big Dreams",
+      image: "/drag4.jpg",
+      category: "Animals",
+      medium: "Ink, marker, pen and coloring pencils",
+      size: "29.7 × 42 cm (A3 vertical)",
+      description: "Tiny Talon, Big Dreams celebrates a newborn dragon’s hopeful gaze, rendered entirely in fine-line ink. Intricate stippling and cross-hatching bring texture to its soft cheeks and unfolding wings, while exaggerated eyes convey boundless curiosity. This piece balances playful charm with technical precision, reminding us that even the smallest beginnings can harbor the grandest ambitions.",
+      price: "USD $ 150",
+      available: true,
+      alt: "",
+    },
+    {
+      id: 38,
       title: "Mr. Sun",
       image: "/sol.jpg",
       category: "geometric",
@@ -470,7 +482,7 @@ export const artworks = [
       alt: "",
     },
     {
-      id: 38,
+      id: 39,
       title: "Mrs. Moon",
       image: "/luna.jpg",
       category: "geometric",
@@ -481,18 +493,7 @@ export const artworks = [
       available: false,
       alt: "",
     },
-    {
-      id: 39,
-      title: "Tiny Talon, Big Dreams",
-      image: "/drag4.jpg",
-      category: "Animals",
-      medium: "Ink, marker, pen and coloring pencils",
-      size: "29.7 × 42 cm (A3 vertical)",
-      description: "Tiny Talon, Big Dreams celebrates a newborn dragon’s hopeful gaze, rendered entirely in fine-line ink. Intricate stippling and cross-hatching bring texture to its soft cheeks and unfolding wings, while exaggerated eyes convey boundless curiosity. This piece balances playful charm with technical precision, reminding us that even the smallest beginnings can harbor the grandest ambitions.",
-      price: "USD $ 150",
-      available: true,
-      alt: "",
-    },
+    
      {
       id: 40,
       title: "Baloon Fishy",
