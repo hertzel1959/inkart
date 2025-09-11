@@ -554,5 +554,29 @@ export const artworks = [
       available: false,
       alt: "",
     },
+ {
+      id: 45,
+      title: "Heart of Royal Splendor",
+      image: "/art4.jpg",
+      category: "fantasy",
+      medium: "Ink, marker, acrylics",
+      size: "29.7 × 42 cm ",
+      description: "This mandala radiates opulence with its bold interplay of crimson red, sapphire blue, and emerald green, all framed by golden filigree. At its center, an ornate floral medallion blooms with delicate pastel tones, expanding outward into heart-shaped motifs that pulse with vibrant energy. The symmetry is both regal and playful, balancing elegance with warmth. A piece that embodies timeless ornamentation, yet feels alive through its vivid colors and intricate details.",
+      price: "USD $",
+      available: false,
+      alt: "",
+    },
+{
+    id: 46,
+    title: "Draglings",
+    img: "gallery/Draglings.jpg",
+    category: "Animals",
+    medium: "Mixed Media ink and coloring pencil on paper",
+    size:"42 × 29.7 cm (A3)",
+    description: "Draglings- depicts Mama Drake with her three baby dragons in front of a distant castle. A lone monk watches from the left mountain, adding mystery to this tender, magical scene. ideal for collectors who appreciate detailed linework and mythical creatures", 
+    price: "USD $299",
+    sold: false,
+  },
+
   ]
   
