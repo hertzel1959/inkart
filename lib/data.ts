@@ -533,7 +533,7 @@ export const artworks = [
  {
       id: 43,
       title: "Garden of Radiant Symmetry",
-      image: "/art2.jpg",
+      image: "/art3.jpg",
       category: "fantasy",
       medium: "Ink, marker, acrylics",
       size: "29.7 × 42 cm ",
@@ -545,7 +545,7 @@ export const artworks = [
      {
       id: 44,
       title: "Heart of Royal Splendor",
-      image: "/art2.jpg",
+      image: "/art4.jpg",
       category: "fantasy",
       medium: "Ink, marker, acrylics",
       size: "29.7 × 42 cm ",
