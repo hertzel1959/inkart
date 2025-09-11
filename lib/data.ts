@@ -478,7 +478,7 @@ export const artworks = [
       size: "29.7 × 42 cm (A3 vertical)",
       description: "Mr. Sun is a vibrant mandala that radiates warmth and intricate energy. Dominated by golden yellows, sunburst oranges, and earthy reds, the piece evokes the essence of sunlight and vitality. Its symmetrical design combines floral and tribal elements, forming a central bloom surrounded by complex patterns that resemble sunrays and organic shields. Accents of green and heart shapes bring balance and harmony, while the artist’s signature, 'Mabel', grounds the composition with a personal touch. This hand-drawn mandala celebrates the life-giving force of the sun with color, symmetry, and soul.",
       price: "USD $",
-      available: false,
+      available: true,
       alt: "",
     },
     {
@@ -490,7 +490,7 @@ export const artworks = [
       size: "29.7 × 42 cm (A3 vertical)",
       description: "Mr. Sun is a vibrant mandala that radiates warmth and intricate energy. Dominated by golden yellows, sunburst oranges, and earthy reds, the piece evokes the essence of sunlight and vitality. Its symmetrical design combines floral and tribal elements, forming a central bloom surrounded by complex patterns that resemble sunrays and organic shields. Accents of green and heart shapes bring balance and harmony, while the artist’s signature, 'Mabel', grounds the composition with a personal touch. This hand-drawn mandala celebrates the life-giving force of the sun with color, symmetry, and soul.",
       price: "USD $",
-      available: false,
+      available: true,
       alt: "",
     },
     
@@ -503,7 +503,7 @@ export const artworks = [
       size: "29.7 × 42 cm (A3 vertical)",
       description: "A dance of lines and colors, this mandala echoes the gentle puff and graceful flow of a balloon fish, where each curve breathes life and each shade whispers of the sea",
       price: "USD $",
-      available: false,
+      available: true,
       alt: "",
     },
  {
@@ -515,7 +515,7 @@ export const artworks = [
       size: "29.7 × 42 cm ",
       description: "This hand-colored ornamental design celebrates the elegance of classical motifs with a vibrant modern touch. The composition features interlaced scrolls, leafy flourishes, and floral accents, carefully balanced to create a sense of symmetry and harmony. Warm earthy browns, golden yellows, and lively greens blend with pops of red, infusing the artwork with both richness and vitality. The interplay of colors highlights the depth of the intricate patterns, transforming the piece into a visual symphony where tradition meets personal creativity",
       price: "USD $",
-      available: false,
+      available: true,
       alt: "",
     },
      {
@@ -527,7 +527,7 @@ export const artworks = [
       size: "29.7 × 42 cm ",
       description: "This radiant mandala unfolds like a celestial garden, where deep navy blue and vibrant magenta meet golden arabesques in perfect harmony. Delicate pastel blossoms soften the intricate geometry, creating a balance between elegance and vitality. The interplay of rich colors and luminous gold accents evokes both opulence and serenity, transforming the pattern into a mesmerizing dance of symmetry and floral grace. A piece that invites contemplation, yet dazzles with its ornamental brilliance.",
       price: "USD $",
-      available: false,
+      available: true,
       alt: "",
     },
  {
@@ -539,7 +539,7 @@ export const artworks = [
       size: "29.7 × 42 cm ",
       description: "This mandala blossoms with vibrant contrasts, where deep navy and crimson red embrace turquoise accents and golden flourishes. At its heart, a delicate floral star expands outward, framed by intricate petals and tiny blossoms in soft pastels. The balance between bold geometry and gentle floral motifs creates a sense of both energy and serenity. A celebration of harmony in motion, this piece transforms ornamental tradition into a living garden of color and light.",
       price: "USD $",
-      available: false,
+      available: true,
       alt: "",
     },
      {
@@ -551,7 +551,7 @@ export const artworks = [
       size: "29.7 × 42 cm ",
       description: "This mandala radiates opulence with its bold interplay of crimson red, sapphire blue, and emerald green, all framed by golden filigree. At its center, an ornate floral medallion blooms with delicate pastel tones, expanding outward into heart-shaped motifs that pulse with vibrant energy. The symmetry is both regal and playful, balancing elegance with warmth. A piece that embodies timeless ornamentation, yet feels alive through its vivid colors and intricate details.",
       price: "USD $",
-      available: false,
+      available: true,
       alt: "",
     },
  {
@@ -563,19 +563,20 @@ export const artworks = [
       size: "29.7 × 42 cm ",
       description: "This mandala radiates opulence with its bold interplay of crimson red, sapphire blue, and emerald green, all framed by golden filigree. At its center, an ornate floral medallion blooms with delicate pastel tones, expanding outward into heart-shaped motifs that pulse with vibrant energy. The symmetry is both regal and playful, balancing elegance with warmth. A piece that embodies timeless ornamentation, yet feels alive through its vivid colors and intricate details.",
       price: "USD $",
-      available: false,
+      available: true,
       alt: "",
     },
 {
     id: 46,
     title: "Draglings",
-    img: "gallery/Draglings.jpg",
+    image: "gallery/Draglings.jpg",
     category: "Animals",
     medium: "Mixed Media ink and coloring pencil on paper",
     size:"42 × 29.7 cm (A3)",
     description: "Draglings- depicts Mama Drake with her three baby dragons in front of a distant castle. A lone monk watches from the left mountain, adding mystery to this tender, magical scene. ideal for collectors who appreciate detailed linework and mythical creatures", 
-    price: "USD $299",
-    sold: false,
+    price: "USD $",
+    available: true,
+    alt: "",
   },
 
   ]
