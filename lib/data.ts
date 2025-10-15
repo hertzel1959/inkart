@@ -556,12 +556,12 @@ export const artworks = [
     },
  {
       id: 45,
-      title: "Heart of Royal Splendor",
-      image: "/art4.jpg",
-      category: "fantasy",
+      title: "Radiant Harmony Mandala
+      image: "/art5.jpg",
+      category: "Geometric",
       medium: "Ink, marker, acrylics",
       size: "29.7 × 42 cm ",
-      description: "This mandala radiates opulence with its bold interplay of crimson red, sapphire blue, and emerald green, all framed by golden filigree. At its center, an ornate floral medallion blooms with delicate pastel tones, expanding outward into heart-shaped motifs that pulse with vibrant energy. The symmetry is both regal and playful, balancing elegance with warmth. A piece that embodies timeless ornamentation, yet feels alive through its vivid colors and intricate details.",
+      description: "This hand-drawn mandala, titled Radiant Harmony, symbolizes the balance between complexity and tranquility. Through the use of vibrant colors—deep blues, lush greens, and warm pinks—the composition evokes both energy and serenity. Each concentric layer represents growth and inner connection, while the intricate floral and geometric motifs express the artist’s attention to symmetry and harmony. The fine detailing and bold contrasts highlight a meditative creative process, making this piece a celebration of mindfulness and artistic precision."
       price: "USD $",
       available: true,
       alt: "",
@@ -569,7 +569,7 @@ export const artworks = [
 {
     id: 46,
     title: "Draglings",
-    image: "/dragons.jpg",
+    image: "/dragon.jpg",
     category: "Animals",
     medium: "Mixed Media ink and coloring pencil on paper",
     size:"42 × 29.7 cm (A3)",
@@ -578,6 +578,29 @@ export const artworks = [
     available: true,
     alt: "",
   },
-
+{
+    id: 48,
+    title: "Ocean Serenity Mandala",
+    image: "/art6.jpg",
+    category: "Geometric",
+    medium: "Mixed Media ink and coloring pencil on paper",
+    size:"42 × 29.7 cm (A3)",
+    description: "Ocean Serenity Mandala captures the calm strength of the sea through an intricate balance of blues, yellows, and whites. The detailed floral geometry radiates from the center like waves expanding in still water, symbolizing peace, introspection, and spiritual depth. Each layer unfolds in harmonious rhythm, reflecting both precision and fluidity. The cool color palette evokes a meditative atmosphere, inviting the viewer to pause, breathe, and immerse in tranquility.", 
+    price: "USD $",
+    available: true,
+    alt: "",
+  },
+  {
+    id: 49,
+    title: "Celestial Bloom Mandala",
+    image: "/art7.jpg",
+    category: "Geometric",
+    medium: "Mixed Media ink and coloring pencil on paper",
+    size:"42 × 29.7 cm (A3)",
+    description: "Celestial Bloom Mandala radiates vitality and cosmic balance through its rich interplay of colors and patterns. The artwork combines warm tones of red, orange, and gold with the serenity of blue, evoking the duality between energy and peace. Each petal-like motif unfolds from the center like a blooming flower, symbolizing growth, renewal, and harmony. The meticulous pointillist detailing enhances its texture and depth, reflecting patience and devotion in every stroke. This piece embodies a celebration of life, light, and the infinite rhythm of the universe.", 
+    price: "USD $",
+    available: true,
+    alt: "",
+  },
   ]
   
