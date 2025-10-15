@@ -557,7 +557,7 @@ export const artworks = [
  {
       id: 45,
       title: "Radiant Harmony Mandala",
-      image: "/art550.jpg",
+      image: "/art50.jpg",
       category: "Geometric",
       medium: "Ink, marker, acrylics",
       size: "29.7 × 42 cm ",
@@ -581,7 +581,7 @@ export const artworks = [
 {
     id: 48,
     title: "Ocean Serenity Mandala",
-    image: "/art660.jpg",
+    image: "/art60.jpg",
     category: "Geometric",
     medium: "Mixed Media ink and coloring pencil on paper",
     size:"42 × 29.7 cm (A3)",
@@ -593,7 +593,7 @@ export const artworks = [
   {
     id: 49,
     title: "Celestial Bloom Mandala",
-    image: "/art770.jpg",
+    image: "/art70.jpg",
     category: "Geometric",
     medium: "Mixed Media ink and coloring pencil on paper",
     size:"42 × 29.7 cm (A3)",
