@@ -556,12 +556,12 @@ export const artworks = [
     },
  {
       id: 45,
-      title: "Radiant Harmony Mandala
+      title: "Radiant Harmony Mandala",
       image: "/art5.jpg",
       category: "Geometric",
       medium: "Ink, marker, acrylics",
       size: "29.7 × 42 cm ",
-      description: "This hand-drawn mandala, titled Radiant Harmony, symbolizes the balance between complexity and tranquility. Through the use of vibrant colors—deep blues, lush greens, and warm pinks—the composition evokes both energy and serenity. Each concentric layer represents growth and inner connection, while the intricate floral and geometric motifs express the artist’s attention to symmetry and harmony. The fine detailing and bold contrasts highlight a meditative creative process, making this piece a celebration of mindfulness and artistic precision."
+      description: "This hand-drawn mandala, titled Radiant Harmony, symbolizes the balance between complexity and tranquility. Through the use of vibrant colors—deep blues, lush greens, and warm pinks—the composition evokes both energy and serenity. Each concentric layer represents growth and inner connection, while the intricate floral and geometric motifs express the artist’s attention to symmetry and harmony. The fine detailing and bold contrasts highlight a meditative creative process, making this piece a celebration of mindfulness and artistic precision.",
       price: "USD $",
       available: true,
       alt: "",
