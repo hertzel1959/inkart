@@ -569,7 +569,7 @@ export const artworks = [
 {
     id: 46,
     title: "Draglings",
-    image: "gallery/Draglings.jpg",
+    image: "gallery/Draglings1.jpg",
     category: "Animals",
     medium: "Mixed Media ink and coloring pencil on paper",
     size:"42 × 29.7 cm (A3)",
