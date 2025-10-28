@@ -602,5 +602,17 @@ export const artworks = [
     available: true,
     alt: "",
   },
+  {
+    id: 50,
+    title: "Northern Sky",
+    image: "/art70.jpg",
+    category: "Geometric",
+    medium: "Mixed Media ink and coloring pencil on paper",
+    size:"42 × 29.7 cm (A3)",
+    description: "This intricate mandala is a hand-drawn exploration of cosmic harmony and detailed craftsmanship. Divided into four quadrants, each section showcases unique patterns that blend seamlessly to form a unified whole. The piece evokes the enchanted mystery of the northern sky, inviting viewers to discover romance and magic in the delicate interplay of shapes and shading. Rendered in fine black ink, it highlights precision and artistic dedication.", 
+    price: "USD $",
+    available: true,
+    alt: "",
+  },
   ]
   
