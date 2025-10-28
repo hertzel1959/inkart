@@ -605,7 +605,7 @@ export const artworks = [
   {
     id: 50,
     title: "Northern Sky",
-    image: "/art70.jpg",
+    image: "/northernsky.png",
     category: "Geometric",
     medium: "Mixed Media ink and coloring pencil on paper",
     size:"42 × 29.7 cm (A3)",
