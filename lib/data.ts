@@ -614,5 +614,17 @@ export const artworks = [
     available: true,
     alt: "",
   },
+  {
+    id: 51,
+    title: "Mighty Eros",
+    image: "/eros.png",
+    category: "Animals",
+    medium: "Mixed Media ink and coloring pencil on paper",
+    size:"42 × 29.7 cm (A3)",
+    description: "Mighty Eros explores the delicate balance between strength and vulnerability, embodying a visual journey through the complexities of life and the human experience. The work invites viewers to contemplate the connection between the tangible and the ethereal, with a unique focus on dynamic forms and powerful symbolism.", 
+    price: "USD $",
+    available: true,
+    alt: "",
+  },
   ]
   
